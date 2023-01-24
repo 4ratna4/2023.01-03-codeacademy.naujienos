@@ -1,0 +1,791 @@
+.green {
+  background-color: green;
+}
+
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.pink {
+  background-color: pink;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.purple {
+  background-color: purple;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.black {
+  background-color: black;
+}
+
+.grey {
+  background-color: grey;
+}
+
+.white {
+  background-color: white;
+}
+
+.brown {
+  background-color: brown;
+}
+
+.containers {
+  width: 1200px;
+  height: 800px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  margin: 30px;
+}
+
+.container {
+  background-color: lightgray;
+  /* height: calc(100% / 4);
+  width: calc(100% / 5); */
+  margin: 30px;
+}
+
+/* .container-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+
+.container-1 .child:nth-child(2),
+.container-1 .child:nth-child(3),
+.container-1 .child:nth-child(6) {
+  grid-column: span 2;
+} */
+
+.container-1 {
+  display: grid;
+  grid-template-areas: "first second second"
+  "third third fourth"
+  "fifth sixth sixth";
+}
+
+.container-1 .child:nth-child(1) {
+  grid-area: first;
+}
+.container-1 .child:nth-child(2) {
+  grid-area: second;
+}
+.container-1 .child:nth-child(3) {
+  grid-area: third;
+}
+.container-1 .child:nth-child(4) {
+  grid-area: fourth;
+}
+.container-1 .child:nth-child(5) {
+  grid-area: fifth;
+}
+.container-1 .child:nth-child(6) {
+  grid-area: sixth;
+}
+
+
+/* .container-2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+
+.container-2 .child:nth-child(2),
+.container-2 .child:nth-child(4),
+.container-2 .child:nth-child(5) {
+  grid-row: span 2;
+} */
+
+.container-2 {
+  display: grid;
+  grid-template-columns: [first] 1fr [second] 1fr [third] 1fr [end];
+  grid-template-rows: [start] 1fr [next] 1fr [great] 1fr [finish];
+}
+
+.container-2 .child:nth-child(2) {
+  grid-column: second;
+  grid-row: start / great;
+}
+
+
+.container-2 .child:nth-child(4),
+.container-2 .child:nth-child(6) {
+  grid-row: next / finish;
+}
+
+
+/* .container-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.container-3 .child:first-child {
+  grid-area: span 2 / span 2;
+} */
+
+.container-3 {
+  display: grid;
+  grid-template-areas: "one one two"
+  "one one three"
+  "four five six";
+}
+
+.container-3 .child:nth-child(1) {
+  grid-area: one;
+}
+.container-3 .child:nth-child(2) {
+  grid-area: two;
+}
+.container-3 .child:nth-child(3) {
+  grid-area: three;
+}
+.container-3 .child:nth-child(4) {
+  grid-area: four;
+}
+.container-3 .child:nth-child(5) {
+  grid-area: five;
+}
+.container-3 .child:nth-child(6) {
+  grid-area: six;
+}
+
+/* .container-4 {
+  display: grid;
+  grid-template-columns: 1.5fr repeat(3, 1fr) 1.5fr;
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.container-4 .child:nth-child(1),
+.container-4 .child:nth-child(3),
+.container-4 .child:nth-child(9),
+.container-4 .child:nth-child(11) {
+  grid-column: span 2;
+}
+
+.container-4 .child:nth-child(5) {
+  grid-area: span 2 / span 3;
+} */
+
+
+.container-4 {
+display: grid;
+grid-template-rows: 1fr 2fr 1fr;
+}
+
+.container-4 .inner-container.orange,
+.container-4 .inner-container.brown {
+  display: grid;
+  grid-template-columns: [start] 2fr [middle] 1fr [end] 2fr [finish];
+}
+
+.container-4 .inner-container.pink {
+  display: grid;
+  grid-template-areas: "one two two three"
+  "four two two five";
+}
+
+.container-4 .inner-container.pink .child:nth-child(1) {
+  grid-area: one;
+}
+.container-4 .inner-container.pink .child:nth-child(2) {
+  grid-area: two;
+}
+.container-4 .inner-container.pink .child:nth-child(3) {
+  grid-area: three;
+}
+.container-4 .inner-container.pink .child:nth-child(4) {
+  grid-area: four;
+}
+.container-4 .inner-container.pink .child:nth-child(5) {
+  grid-area: five;
+}
+
+
+/* 
+.container-5 {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.container-5 .child:nth-child(1),
+.container-5 .child:nth-child(3),
+.container-5 .child:nth-child(6),
+.container-5 .child:nth-child(10) {
+  grid-column: span 2;
+  grid-row: span 2;
+
+}
+
+.container-5 .child:nth-child(2),
+.container-5 .child:nth-child(9) {
+  grid-column: span 4;
+  grid-row: span 2;
+} */
+
+.container-5 {
+  display: grid;
+  grid-template-areas: "one one two two two two"
+  "one one two two two two"
+  "three three four five six six"
+  "three three seven eight six six"
+  "nine nine nine nine ten ten"
+  "nine nine nine nine ten ten";
+}
+
+.container-5 .child:nth-child(1) {
+  grid-area: one;
+}
+.container-5 .child:nth-child(2) {
+  grid-area: two;
+}
+.container-5 .child:nth-child(3) {
+  grid-area: three;
+}
+.container-5 .child:nth-child(4) {
+  grid-area: four;
+}
+.container-5 .child:nth-child(5) {
+  grid-area: five;
+}
+.container-5 .child:nth-child(6) {
+  grid-area: six;
+}
+.container-5 .child:nth-child(7) {
+  grid-area: seven;
+}
+.container-5 .child:nth-child(8) {
+  grid-area: eight;
+}
+.container-5 .child:nth-child(9) {
+  grid-area: nine;
+}
+.container-5 .child:nth-child(10) {
+  grid-area: ten;
+}
+
+/* .container-6 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr 2fr;
+  grid-template-rows: 2fr 1fr 1fr;
+}
+
+.container-6 .child:nth-child(1) {
+  grid-column: span 4;
+}
+
+.container-6 .child:nth-child(4),
+.container-6 .child:nth-child(5) {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.container-6 .child:nth-child(6) {
+  grid-column: span 2;
+} */
+
+
+.container-6 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr 2fr;
+  grid-template-rows: 2fr 1fr 1fr;
+  grid-template-areas: "one one one one"
+  "two three four five"
+  "six six four five";
+}
+
+.container-6 .child:nth-child(1) {
+  grid-area: one;
+}
+.container-6 .child:nth-child(2) {
+  grid-area: two;
+}
+.container-6 .child:nth-child(3) {
+  grid-area: three;
+}
+.container-6 .child:nth-child(4) {
+  grid-area: four;
+}
+.container-6 .child:nth-child(5) {
+  grid-area: five;
+}
+.container-6 .child:nth-child(6) {
+  grid-area: six;
+}
+
+
+.container-7 .inner-container.grey {
+  width: 100%;
+  height: 50%;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas: "one two"
+  "one three";
+}
+
+.container-7 .inner-container.grey .child:nth-child(1) {
+  grid-area: one;
+}
+.container-7 .inner-container.grey .child:nth-child(2) {
+  grid-area: two;
+}
+.container-7 .inner-container.grey .child:nth-child(3) {
+  grid-area: three;
+}
+
+
+.container-7 .inner-container.pink {
+  width: 100%;
+  height: 50%;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas: "one two"
+  "three two";
+}
+
+.container-7 .inner-container.pink .child:nth-child(1) {
+  grid-area: one;
+}
+.container-7 .inner-container.pink .child:nth-child(2) {
+  grid-area: two;
+}
+.container-7 .inner-container.pink .child:nth-child(3) {
+  grid-area: three;
+}
+
+
+/* .container-7 .inner-container.grey .child:nth-child(1),
+.container-7 .inner-container.pink .child:nth-child(2) {
+  grid-row: span 2;
+} */
+
+/* .container-8 .inner-container.pink {
+  width: 100%;
+  height: 50%;
+}
+
+.container-8 .inner-container.grey {
+  width: 100%;
+  height: 50%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.container-8 .inner-container.pink .child {
+  width: 100%;
+  height: 100%;
+}
+
+.container-8 .inner-container.grey .child:nth-child(2) {
+  grid-row: span 2;
+} */
+
+.container-8 .inner-container.pink {
+  width: 100%;
+  height: 50%;
+}
+
+.container-8 .inner-container.grey {
+  width: 100%;
+  height: 50%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "one two three"
+  "four two five";
+}
+
+.container-8 .inner-container.pink .child {
+  width: 100%;
+  height: 100%;
+}
+
+.container-8 .inner-container.grey .child:nth-child(1) {
+  grid-area: one;
+}
+.container-8 .inner-container.grey .child:nth-child(2) {
+  grid-area: two;
+}
+.container-8 .inner-container.grey .child:nth-child(3) {
+  grid-area: three;
+}
+.container-8 .inner-container.grey .child:nth-child(4) {
+  grid-area: four;
+}
+.container-8 .inner-container.grey .child:nth-child(5) {
+  grid-area: five;
+}
+
+
+/* .container-9 {
+display: grid;
+grid-template-columns: 15% 15% repeat(3, 1fr);
+grid-template-rows: repeat(6, 1fr);
+}
+
+.container-9 .child:nth-child(1) {
+  grid-column: span 2;
+  grid-row: span 3;
+}
+
+.container-9 .child:nth-child(5) {
+  grid-column: span 3;
+  grid-row: span 3;
+}
+
+.container-9 .child:nth-child(5) {
+  grid-column: span 3;
+  grid-row: span 3;
+}
+
+.container-9 .child:nth-child(8),
+.container-9 .child:nth-child(9) {
+  grid-column: span 2;
+  grid-row: span 2;
+} */
+
+.container-9 {
+  display: grid;
+  grid-template-columns: 15% 15% repeat(3, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-areas: "one one two three four"
+  "one one five five five"
+  "one one five five five"
+  "six seven five five five"
+  "eight eight nine nine ten"
+  "eight eight nine nine eleven";
+  }
+
+  .container-9 .child:nth-child(1) {
+    grid-area: one;
+  }
+  .container-9 .child:nth-child(2) {
+    grid-area: two;
+  }
+  .container-9 .child:nth-child(3) {
+    grid-area: three;
+  }
+  .container-9 .child:nth-child(4) {
+    grid-area: four;
+  }
+  .container-9 .child:nth-child(5) {
+    grid-area: five;
+  }
+  .container-9 .child:nth-child(6) {
+    grid-area: six;
+  }
+  .container-9 .child:nth-child(7) {
+    grid-area: seven;
+  }
+  .container-9 .child:nth-child(8) {
+    grid-area: eight;
+  }
+  .container-9 .child:nth-child(9) {
+    grid-area: nine;
+  }
+  .container-9 .child:nth-child(10) {
+    grid-area: ten;
+  }
+  .container-9 .child:nth-child(11) {
+    grid-area: eleven;
+  }
+
+
+/* .container-10 {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr;
+  grid-template-rows: repeat(6, 1fr);
+}
+
+.container-10 .child:nth-child(1),
+.container-10 .child:nth-child(7),
+.container-10 .child:nth-child(9){
+  grid-row: span 2;
+  grid-column: span 2;
+}
+
+.container-10 .child:nth-child(3),
+.container-10 .child:nth-child(5),
+.container-10 .child:nth-child(11){
+  grid-row: span 2;
+} */
+
+.container-10 {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-areas: "one one two three"
+  "one one four three"
+  "five six seven seven"
+  "five eight seven seven"
+  "nine nine ten twelve"
+  "nine nine eleven twelve";
+}
+
+.container-10 .child:nth-child(1) {
+  grid-area: one;
+}
+.container-10 .child:nth-child(2) {
+  grid-area: two;
+}
+.container-10 .child:nth-child(3) {
+  grid-area: three;
+}
+.container-10 .child:nth-child(4) {
+  grid-area: four;
+}
+.container-10 .child:nth-child(5) {
+  grid-area: five;
+}
+.container-10 .child:nth-child(6) {
+  grid-area: six;
+}
+.container-10 .child:nth-child(7) {
+  grid-area: seven;
+}
+.container-10 .child:nth-child(8) {
+  grid-area: eight;
+}
+.container-10 .child:nth-child(9) {
+  grid-area: nine;
+}
+.container-10 .child:nth-child(10) {
+  grid-area: ten;
+}
+.container-10 .child:nth-child(11) {
+  grid-area: eleven;
+}
+.container-10 .child:nth-child(12) {
+  grid-area: twelve;
+}
+
+
+
+/* .container-11 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 4fr 1fr;
+}
+
+.container-11 .child:first-child {
+grid-column: span 5;
+} */
+
+.container-11 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 4fr 1fr;
+  grid-template-areas: "one one one one one"
+  "two three four five six";
+}
+
+.container-11 .child:nth-child(1) {
+  grid-area: one;
+}
+.container-11 .child:nth-child(2) {
+  grid-area: two;
+}
+.container-11 .child:nth-child(3) {
+  grid-area: three;
+}
+.container-11 .child:nth-child(4) {
+  grid-area: four;
+}
+.container-11 .child:nth-child(5) {
+  grid-area: five;
+}
+.container-11 .child:nth-child(6) {
+  grid-area: six;
+}
+
+
+
+.container-12 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.container-13 {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+}
+
+/* .container-14 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+
+.container-14 .child:nth-child(3) {
+  grid-row: span 3;
+}
+
+.container-14 .child:nth-child(5) {
+  grid-row: span 2;
+  grid-column: span 2;
+}
+
+.container-14 .child:nth-child(8) {
+  grid-row: span 3;
+}
+
+.container-14 .child:nth-child(10) {
+  grid-row: span 3;
+  grid-column: span 2;
+} */
+
+.container-14 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-areas: "one two three four"
+  "five five three six"
+  "five five three seven"
+  "eight nine ten ten"
+  "eight eleven ten ten"
+  "eight twelve ten ten";
+}
+
+.container-14 .child:nth-child(1) {
+  grid-area: one;
+}
+.container-14 .child:nth-child(2) {
+  grid-area: two;
+}
+.container-14 .child:nth-child(3) {
+  grid-area: three;
+}
+.container-14 .child:nth-child(4) {
+  grid-area: four;
+}
+.container-14 .child:nth-child(5) {
+  grid-area: five;
+}
+.container-14 .child:nth-child(6) {
+  grid-area: six;
+}
+.container-14 .child:nth-child(7) {
+  grid-area: seven;
+}
+.container-14 .child:nth-child(8) {
+  grid-area: eight;
+}
+.container-14 .child:nth-child(9) {
+  grid-area: nine;
+}
+.container-14 .child:nth-child(10) {
+  grid-area: ten;
+}
+.container-14 .child:nth-child(11) {
+  grid-area: eleven;
+}
+.container-14 .child:nth-child(12) {
+  grid-area: twelve;
+}
+
+
+.container-15 {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.container-15 .inner-container.pink {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.container-15 .inner-container.yellow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.container-16 {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.container-16 .inner-container.grey {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.container-16 .inner-container.grey .child:nth-child(2),
+.container-16 .inner-container.grey .child:nth-child(4) {
+  grid-row: span 2;
+}
+
+.container-17 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.container-17 .inner-container.grey {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.container-17 .inner-container.grey .child:nth-child(1),
+.container-17 .inner-container.grey .child:nth-child(4) {
+  grid-column: span 2;
+}
+
+.container-18 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 2fr 1fr 1fr 2fr;
+}
+
+.container-18 .child:nth-child(2),
+.container-18 .child:nth-child(4),
+.container-18 .child:nth-child(5),
+.container-18 .child:nth-child(6) {
+  grid-row: span 2;
+}
+
+.container-19 {
+  display: grid;
+  grid-template-columns: 2fr repeat(4, 1fr);
+  grid-template-rows: 2fr repeat(4, 1fr);
+}
+
+.container-19 .child:first-child {
+  grid-area: span 3 / span 3;
+}
+
+.container-19 .child:nth-child(2) {
+  grid-column: span 2;
+}
+.container-19 .child:nth-child(7) {
+  grid-row: span 2;
+}
+.container-19 .child:nth-child(10) {
+  grid-row: span 2;
+  grid-column: span 2;
+}
+
+.container-20 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}

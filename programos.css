@@ -1,0 +1,166 @@
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightgray;
+}
+
+.container {
+    max-width: 1230px;
+    margin: 0 30px 0;
+}
+
+.container .upper-part {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.container .upper-part .header {
+    font-size: 56px;
+    margin-bottom: 10px;
+}
+
+.container .upper-part .main-button-wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.container .upper-part .main-button-wrapper a {
+    max-width: 100%;
+    height: 80px;
+}
+
+.container .upper-part .main-button-wrapper .main-button-img {
+
+    object-fit: cover;
+    object-position: left center;  
+}
+
+.content {
+    width: 100%;
+    display: flex;
+}
+
+
+.sidebar {
+    width: 30%;
+
+}
+
+.main-content {
+    width: 70%;
+}
+
+.sidebar-wrapper {
+    background-color: white;
+    padding: 45px 40px 40px;
+    position: sticky;
+    top: 30px;
+}
+
+.programme-header {
+    margin: 0 0 15px;
+}
+
+.filter-element {
+    padding: 15px 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+}
+
+label {
+    font-weight: 700;
+    margin-bottom: -10px;
+}
+
+select {
+    border-radius: 8px;
+    padding: 5px;
+    background-color: lightgrey;   
+    text-transform: uppercase; 
+    font-size: 11px;  
+}
+
+.filter-element-checkbox {
+   margin: 5px 0;
+}
+
+.filter-element-checkbox label {
+    font-weight: 200;
+}
+
+.filter-button {
+    width: 100%;
+    padding: 15px;
+    color: blue;
+    border: 1px solid blue;
+    text-transform: uppercase;
+    font-size: 11px;
+    background-color: white;
+    border-radius: 50px;
+}
+
+.main-content {
+    width: 100%;
+    padding-left: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.programme-wrapper {
+    width: calc(50% - 75px);
+    display: flex;
+    background-color: white;
+    padding: 30px;
+    position: relative;
+}
+
+.programme-wrapper img {
+    width: 50%;
+}
+
+.programme-wrapper a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.course-card-label {
+    text-transform: uppercase;
+    color: white;
+    background-color: rgb(223, 15, 171);
+    padding: 10px;
+    border-radius: 30px;
+    position: absolute;
+    top: 20px;
+    right: -15px;
+}
+
+ul.programme-features {
+    list-style: none;
+    padding: 0;
+}
+
+ul.programme-features li {
+    display: inline-block;
+    padding-left: 25px;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+li.icon-cap {
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill-rule='evenodd'%3E%3Cpath d='M13.053 10.127l.001 4.866h-10v-4.866l5 2.172 5-2.172z'/%3E%3Cpath d='M.983 8l7.071-3.072L15.125 8l-7.071 3.07z'/%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: left;
+    display: inline-block;
+    padding-left: 25px;
+    text-transform: uppercase;
+    font-size: 12px;
+}

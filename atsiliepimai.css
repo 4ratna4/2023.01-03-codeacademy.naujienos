@@ -1,0 +1,102 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.content {
+    width: 1200x;
+    background-image: url(favicon-32x32.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.inner-content {
+    background-color: lightblue;
+    margin-top: 55px;
+    margin-bottom: 55px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.content-wrapper {
+    margin: 65px 35px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "one one two three"
+    "four five five three";
+    gap: 20px;
+    padding: 75px;
+}
+
+.testimonial-wrapper {
+    background-color: grey;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+
+.tekst-header {
+ display: grid;
+ grid-template-rows: 1fr 1fr;
+ grid-template-columns: 1fr 11fr;
+ grid-template-areas: "first second"
+ "first third";
+ column-gap: 20px;
+}
+
+img {
+  
+    border-radius: 50%;
+    border: 2px solid white;
+    grid-area: first;
+}
+
+
+.name {
+    width: auto;
+    font-size: 16px;
+    grid-area: second;
+}
+
+.position {
+    width: auto;
+    font-size: 14px;
+    grid-area: third;
+}
+
+.testimonial {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.testimonial-main {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.testimonial-wrapper.first {
+    background-color: blueviolet;
+    background-image: url(bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: 75% 5%;
+    color: white;
+    grid-area: one;
+}
+.testimonial-wrapper.second {
+    background-color: rgb(117, 87, 146);
+    color: white;
+    grid-area: two;
+}
+.testimonial-wrapper.third {
+    background-color: white;
+    grid-area: four;
+}
+.testimonial-wrapper.fourth {
+    background-color:  rgb(38, 30, 58);
+    color: white;
+    grid-area: five;
+}
+.testimonial-wrapper.fifth {
+    background-color: white;
+    grid-area: three;    
+}
